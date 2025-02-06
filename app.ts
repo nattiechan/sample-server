@@ -18,6 +18,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.get("/pug", (req: Request, res: Response) => {
+  console.log(process.env.DBNAME);
   res.sendStatus(200);
 });
 
@@ -28,5 +29,5 @@ app.use((req: Request, res: Response) => {
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log("Server started on port 3000");
+  console.log(`Server started on port ${port}`);
 });
