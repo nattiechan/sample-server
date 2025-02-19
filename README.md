@@ -16,7 +16,7 @@ The server is best run within a dockerized environment.
 - Clone the repository to your local environment
 - In terminal, run:
   ```bash
-  docker compose up -d test-server && docker compose exec test-server npm run dev
+  docker compose up -d sample-server && docker compose exec sample-server npm run dev
   ```
 - Use Postman, Bruno or equivalent to test the server
 

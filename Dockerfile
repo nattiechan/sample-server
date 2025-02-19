@@ -4,7 +4,7 @@ FROM public.ecr.aws/docker/library/node:20-alpine
 # with git capability
 RUN apk add --no-cache git bash
 
-WORKDIR /app
+WORKDIR /sample-server
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
