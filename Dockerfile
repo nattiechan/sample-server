@@ -1,5 +1,9 @@
 FROM public.ecr.aws/docker/library/node:20-alpine
 
+# Add ability to develop inside docker container
+# with git capability
+RUN apk add --no-cache git bash
+
 WORKDIR /app
 
 # Copy package.json and package-lock.json

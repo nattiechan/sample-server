@@ -1,0 +1,14 @@
+{
+    "name": "Test Server",
+    "dockerComposeFile": [
+        "docker-compose.yml"
+    ],
+    "service": "test-server",
+    "workspaceFolder": "/test-server",
+    "shutdownAction": "none",
+    "customizations": {
+        "extensions": [
+            "esbenp.prettier-vscode"
+        ]
+    }
+}

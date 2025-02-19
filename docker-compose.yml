@@ -1,0 +1,20 @@
+services:
+  test-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DBNAME=test-db
+      - PORT=3000
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/test-server
+      - /test-server/node_modules
+      - $HOME/.ssh:/home/node/.ssh
+      - $HOME/.gitconfig:/home/node/.gitconfig
+      - vscode-files-test-server:/home/node/.vscode-server
+    command: sh -c "sleep infinity"
+
+volumes:
+  vscode-files-test-server:
