@@ -2,7 +2,7 @@ FROM public.ecr.aws/docker/library/node:20-alpine
 
 # Add ability to develop inside docker container
 # with git capability
-RUN apk add --no-cache git bash
+RUN apk add --no-cache git openssh-client bash
 
 WORKDIR /sample-server
 
